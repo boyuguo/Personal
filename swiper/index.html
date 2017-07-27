@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="swiper-3.4.1.min.css">
+	<style>
+		*{margin:0;padding:0;}
+		html,body{width:100%;height:100%;}
+		.box{width:300px;height:300px;margin:100px auto;border:1px solid #ccc;}
+		.swiper-slide{width:100%;height:100%;text-align:center;line-height:300px;color:#fff;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide" style="background:#f00;">Slide 1</div>
+		        <div class="swiper-slide" style="background:#0f0;">Slide 2</div>
+		        <div class="swiper-slide" style="background:#00f;">Slide 3</div>
+		    </div>
+		      <!-- 如果需要分页器 -->
+    		<div class="swiper-pagination"></div>
+    		 <!-- 如果需要导航按钮 -->
+		    <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+<script src="../js/jquery-3.1.0.min.js"></script>	
+<script src='swiper-3.4.1.min.js'></script>
+
+<script>
+
+	var mySwiper = new Swiper ('.swiper-container', {
+	    loop: true,
+	    autoplay : 3000,
+	    grabCursor : true,
+	    autoplayDisableOnInteraction : false,
+	     // 如果需要分页器
+    	pagination: '.swiper-pagination',
+    	// 如果需要前进后退按钮
+    	nextButton: '.swiper-button-next',
+    	prevButton: '.swiper-button-prev',
+        //effect : 'coverflow',
+		// slidesPerView: 1.4,
+		// centeredSlides: true,
+		// coverflow: {
+		//             rotate: 30,
+		//             stretch: 10,
+		//             depth: 60,
+		//             modifier: 2,
+		//             slideShadows : true
+		//         }
+	  }) 
+
+	var num = 100;
+	var obj = {
+		num:200,
+		inner:{
+			num:300,
+			print:function(){
+				console.log(this.num);
+			}
+		}
+	}
+	var foo = obj.inner.print
+	console.log(foo())   // 100
+	console.log(obj.inner.print())   // 300 
+	console.log((obj.inner.print=obj.inner.print)())  // 100
+
+
+	function aa(){
+		var num = 666; 
+		var sayAlert = function() {
+			console.log(num)
+		
+		} 
+		num ++;
+		return sayAlert ;
+	} 
+	var sayAlert = aa() ;
+	sayAlert()
+
+</script>
+
+</body>
+</html>

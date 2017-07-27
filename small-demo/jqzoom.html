@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜效果</title>
+	<style>
+		*{padding:0;margin:0;}
+		html,body{
+			width:100%;height:100%;
+		}
+		#box{display:block;width:400px;height:400px;}
+	</style>
+</head>
+<body>
+
+  <a id="box"  href="img/big.png" >
+		<img src="img/small.png"  title="kawasakigreen">
+  </a>
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="js/enlarge.js"></script>
+<script>
+
+
+	$("#box").enlarge({
+		shadecolor: "#FFD24D",  // 遮罩层的背景色
+        shadeborder: "#FF8000", // 遮罩层的border颜色
+        shadeopacity: 0.5,      // 遮罩层的透明度
+        cursor: "move",         // 遮罩层上光标的形状
+        
+        layerwidth: 400,        // 大图盒子的宽度
+        layerheight: 400,       // 大图盒子的高度
+        layerborder: "#DDD",    // 大图盒子的border颜色
+        fade: true,             // 是否渐隐渐现
+        
+        //largewidth: 1200,     // 大图的宽度
+        //largeheight: 1200     // 大图的高度
+	})
+	//  遮罩层的大小取决于：layerwidth/layerheight = largewidth/largeheight 
+</script>
+</body>
+</html>

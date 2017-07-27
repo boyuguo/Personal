@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播切换小圆点</title>
+    <style>
+        *{
+            margin:0 ;padding:0;
+        }
+        .content{
+            width:120px;
+            border:1px solid #ccc;
+            height:20px;
+            margin:50px auto;
+            position:relative;
+            overflow-x:auto;
+            padding:5px 20px;
+        }
+        .list{
+            width:100%;
+            height:100%;
+            background:#fff;
+            overflow:hidden;
+        }
+        .content ul{
+            overflow:hidden;
+            list-style: none;
+            margin:0 auto;
+        }
+        .content ul li{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            margin:0 10px;
+            float:left;
+            list-style:none;
+        }
+        .left-btn,.right-btn{
+            position:absolute;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            text-align:center;
+            top:5px;
+            cursor:pointer;
+        }
+        .left-btn{
+            left:0;
+        }
+        .right-btn{
+            right:0;
+        }
+        .none{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="box" id="box">
+    <div class="content">
+        <p class="left-btn"> < </p>
+        <div class="list">
+            <ul>
+                <li style="background:#f00"></li>
+                <li style="background:#0f0"></li>
+                <li style="background:#00f"></li>
+                <li style="background:#ff0"></li>
+            </ul>
+        </div>
+        <p class="right-btn"> > </p>
+    </div>
+    <div class="content">
+        <p class="left-btn"> < </p>
+        <div class="list">
+            <ul>
+                <li style="background:#f00"></li>
+                <li style="background:#0f0"></li>
+                <li style="background:#00f"></li>
+                <li style="background:#ff0"></li>
+                <li style="background:#0ff"></li>
+            </ul>
+        </div>
+        <p class="right-btn"> > </p>
+    </div>
+    <div class="content">
+        <p class="left-btn"> < </p>
+        <div class="list">
+            <ul>
+                <li style="background:#f00"></li>
+                <li style="background:#0f0"></li>
+                <li style="background:#00f"></li>
+                <li style="background:#ff0"></li>
+                <li style="background:#0ff"></li>
+                <li style="background:#0ff"></li>
+            </ul>
+        </div>
+        <p class="right-btn"> > </p>
+    </div>
+
+    <div class="content">
+        <p class="left-btn"> < </p>
+        <div class="list">
+            <ul>
+                <li style="background:#f00"></li>
+                <li style="background:#0f0"></li>
+                <li style="background:#00f"></li>
+                <li style="background:#ff0"></li>
+                <li style="background:#0ff"></li>
+                <li style="background:#0ff"></li>
+                <li style="background:#f0f"></li>
+            </ul>
+        </div>
+        <p class="right-btn"> > </p>
+    </div>
+
+    <div class="content">
+        <p class="left-btn"> < </p>
+        <div class="list">
+            <ul>
+                <li style="background:#f00"></li>
+                <li style="background:#0f0"></li>
+                <li style="background:#00f"></li>
+            </ul>
+        </div>
+        <p class="right-btn"> > </p>
+    </div>
+
+    <div class="content">
+        <p class="left-btn"> < </p>
+        <div class="list">
+            <ul>
+                <li style="background:#f00"></li>
+            </ul>
+        </div>
+        <p class="right-btn"> > </p>
+    </div>
+
+</div>
+
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+
+    $(function(){
+
+        $('#box ul').each(function(i,obj){
+            var num = $(obj).find('li').length,
+                    ele = $(obj),
+                    marginleft = ele.css('margin-left').split('px')[0]*1,
+                    v = (num - 3)* (-40),
+                    w = 40*num;
+            $(obj).css('width',w);
+            if(num <= 3){
+                ele.closest('.content').find('.left-btn').addClass('none');
+                ele.closest('.content').find('.right-btn').addClass('none');
+            }else{
+                if(marginleft == 0){
+                    ele.closest('.content').find('.left-btn').addClass('none');
+                }else if(marginleft == v){
+                    ele.closest('.content').find('.right-btn').addClass('none');
+                }
+            }
+        })
+        //  点击右按钮
+        $('#box').on('click','.right-btn',function(){
+            var _this = $(this),
+                    list = _this.prev().find('ul'),
+                    num = _this.prev().find('ul>li').length,
+                    otherNum = Math.floor(num - 3),
+                    _otherBth = _this.closest('.content').find('.left-btn'),
+                    marginleft = list.css('marginLeft').split('px')[0]*1;
+
+            if(otherNum < 0){
+                marginleft = marginleft;
+            }else{
+                var leftNum = Math.abs(marginleft/40); // 左侧按钮的个数
+                console.log(otherNum,'剩余总个数');
+                console.log(leftNum,'点击前左侧个数');
+                if((otherNum - leftNum) > 3){ // 判断右侧剩余个数
+                    marginleft += -40 * 3;
+                    _this.removeClass('none');
+                    _otherBth.removeClass('none');
+                }else{ // 右侧个数小于3 走的是剩余个数*一个圆的尺寸
+                    marginleft += -40 * (otherNum - leftNum);
+                    _this.addClass('none');
+                    _otherBth.removeClass('none');
+                }
+            }
+            list.animate({
+                'marginLeft': marginleft+'px'
+            },500)
+
+        })
+
+
+        // 点击左按钮
+        $('#box').on('click','.left-btn',function(){
+            var _this = $(this),
+                    list = _this.next().find('ul'),
+                    num = _this.next().find('ul>li').length,
+                    otherNum = Math.floor(num - 3),
+                    _otherBth = _this.closest('.content').find('.right-btn'),
+                    marginleft = list.css('marginLeft').split('px')[0]*1;
+
+            if(otherNum < 0){
+                marginleft = 0;
+            }else{
+                var rightNum = Math.abs(marginleft/40);
+                console.log(otherNum,'剩余总个数');
+                console.log(rightNum,'点击前左侧个数');
+                if(rightNum > 3){
+                    marginleft += 40 * 3;
+                    _this.removeClass('none');
+                    _otherBth.removeClass('none');
+                }else{
+                    marginleft += 40 * rightNum;
+                    _this.addClass('none');
+                    _otherBth.removeClass('none');
+                }
+            }
+
+            list.animate({
+                'marginLeft': marginleft+'px'
+            },500)
+
+        })
+    })
+
+</script>
+</body>
+</html>

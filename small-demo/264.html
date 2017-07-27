@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>轮播切换</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .box{
+      width: 190px;
+      height: 50px;
+      background: red;
+    }
+    nav{
+      position: relative;
+    }
+    span{
+      position: absolute;
+      display: none;
+      cursor: pointer;
+    }
+    .left_btn, .right_btn{
+      width: 20px;
+      height: 50px;
+      background: green
+    }
+    .left_btn{
+      left: 0;
+      top: 0;
+    }
+    .right_btn{
+      right: 0;
+      top: 0;
+    }
+    .active{
+      display: block;
+    }
+    .list{
+      position: absolute;
+      left: 20px;
+      width: 150px;
+      height: 50px;
+      background: yellow;
+      overflow: hidden;
+    }
+    .list ul{
+      float: left;
+      padding-top: 10px;
+    }
+    .list li{
+      width: 30px;
+      height: 30px;
+      background: blue;
+      border-radius: 50%;
+      float: left;
+      margin: 0 10px;
+      color: #fff;
+      text-align:center;
+      line-height:30px;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="list">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+  </div>
+  <nav>
+    <span class="left_btn active"></span>
+    <span class="right_btn"></span>
+  </nav>
+
+  <h3 style="padding-top:100px;">解释：</h3>
+  <p>此效果为轮播切换，能点击时为绿色方框，不能点击时默认为红色方框；</p>
+  <p>能点击时为小手状态，不能点击是为箭头状态；</p>
+</div>
+<script src="../js/jquery-3.1.0.min.js"></script>
+
+<script type="text/javascript">
+  $(function(){
+    $('ul').css({'width': $('ul li').length*50+'px'})
+  })
+  var len = $('ul li').length,
+      num = len;
+
+  $('.left_btn').click(function(){
+    num = Math.floor(num - 3);
+    var marginLeft = $('ul').css('marginLeft').split('px')[0] * 1;
+    if(num < 0){
+      marginLeft = marginLeft;
+    }else if(num > 3){
+      marginLeft += -50 * 3;
+    }else{
+      marginLeft += -50 * num;
+      $('.left_btn').removeClass('active');
+      $('.right_btn').addClass('active')
+    }
+    $('ul').css({
+      'margin-left': marginLeft + 'px',
+      'transition':"all 1s"
+    })
+  })
+
+  $('.right_btn').click(function(){
+    var marginLeft = $('ul').css('marginLeft').split('px')[0] * 1;
+    num = len;
+    if(Math.abs(marginLeft) > 150){
+      marginLeft += 150
+    }else{
+      marginLeft = 0
+      $('.left_btn').addClass('active');
+      $('.right_btn').removeClass('active')
+    }
+    $('ul').css({
+      'margin-left': marginLeft + 'px',
+      'transition':"all 1s"
+    })
+  })
+</script>
+</body>
+</html>

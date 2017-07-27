@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>进度条</title>
+	<style>
+		.box{
+			position:absolute;width:100%;height:20px;background:#0f0;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="SomeElementYouWantToAnimate" class="box"></div>
+	
+	
+<script>
+	window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+	var start = null;
+	var d = document.getElementById('SomeElementYouWantToAnimate');
+	function step(timestamp) { 
+	  if (start === null) start = timestamp;
+	  console.log(timestamp,start,'timestamp and start');
+	  var progress = timestamp - start;
+	  console.log(progress,'progress');
+	  d.style.left = Math.min(progress/10, 200) + "px";
+	  if (progress < 2000) {
+	    requestAnimationFrame(step);
+	  }
+	}
+	requestAnimationFrame(step);
+</script>
+
+
+</body>
+</html>

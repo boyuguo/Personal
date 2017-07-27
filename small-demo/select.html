@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框展示效果</title>
+    <style>
+        *, :after, :before {box-sizing: border-box;}
+        *{margin:0;padding:0;}
+        html,body{width:100%;height:100%;overflow:hidden;}
+        .box{min-width: 135px;width:135px;margin:50px auto;}
+        .select-title{position: relative;font-weight: 400;font-size: 14px;cursor: pointer;overflow: hidden;
+            color: #363636;border: 1px solid #ddd;padding: 6px 12px;}
+        i{position:absolute;right:10px;top:8px;font-style:normal;}
+        ul,li{list-style:none;}
+        .list{ position: absolute;min-width: 135px;z-index: 100;border: 1px solid #aaa;
+            margin-top: -1px;background: #fff;display:none;
+        }
+        .list-active{display:block;}
+        li{font-size: 12px;cursor: pointer;padding: 6px 10px;overflow: hidden;text-overflow: ellipsis;
+            white-space: nowrap;line-height: 1.3333333;}
+        li:hover{background:#e1a066;color:#fff;}
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+    </div>
+
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+
+    contentBox();
+    function contentBox(){
+        var html="";
+        html+='<p class="select-title" id="select-title">'
+                +'<span id="select-title-val">Our Pick</span>'
+                    +'<i>^</i>'
+                +'</p>'
+                    +'<ul class="list" id="list">'
+                        +'<li>Our Pick1</li>'
+                        +'<li>Our Pick2</li>'
+                        +'<li>Our Pick3</li>'
+                        +'<li>Our Pick4</li>'
+                        +'<li>Our Pick5</li>'
+                    +'</ul>'
+        $('.box').html(html);
+        selectModule($('#select-title'),$('#list'),$('#select-title-val'));
+    }
+
+
+    function selectModule($txt,$ul,$val){
+        $txt.on('click',function(){
+            $ul.addClass('list-active');
+            $(this).find('i').text('>');
+        })
+        $ul.on('click','li',function(){
+            var val = $(this).text();
+            $val.text(val);
+            $ul.removeClass('list-active');
+            $txt.find('i').text('^');
+        })
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

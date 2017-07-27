@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原点切换效果</title>
+    <style>
+        *{
+            margin:0 ;padding:0;
+        }
+        .content{
+            width:120px;
+            border:1px solid #ccc;
+            height:20px;
+            margin:50px auto;
+            position:relative;
+            overflow-x:auto;
+            padding:5px 20px;
+        }
+        .list{
+            width:100%;
+            height:100%;
+            background:#fff;
+            overflow:hidden;
+        }
+        .content ul{
+            overflow:hidden;
+            list-style: none;
+            margin:0 auto;
+        }
+        .content ul li{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            margin:0 10px;
+            float:left;
+            list-style:none;
+        }
+        .left-btn,.right-btn{
+            position:absolute;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            text-align:center;
+            top:5px;
+            cursor:pointer;
+        }
+        .left-btn{
+            left:0;
+        }
+        .right-btn{
+            right:0;
+        }
+        .none{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--<div class="box">
+        <div class="img-content">
+            <img src="" alt="">
+        </div>
+        <ul>
+            <li class="hot">
+                <span>设置固定宽高用来显示当前高亮蓝</span>
+                <p>用来设置img的高亮,设置大小与图片一直,位置也需一直,高亮时改变背景色</p>
+                <b>用来存放文字</b>
+            </li>
+            <li>
+                <span>设置固定宽高用来显示当前高亮蓝</span>
+                <p>用来设置img的高亮,设置大小与图片一直,位置也需一直,高亮时改变背景色</p>
+                <b>用来存放文字</b>
+            </li>
+        </ul>
+    </div>-->
+    <!--
+    设置li高亮的时候,直接给li起一个hot的class,然后分别设置hot下的span背景色未蓝色;p标签的背景色为白色;b标签的color为
+    白色;一定要注意img图片的层级一定要高于ul,当p标签更换背景色时,可以时透明图随之变色
+    -->
+
+    <div class="box" id="box">
+        <div class="content">
+            <p class="left-btn"> < </p>
+            <div class="list">
+                <ul>
+                    <li style="background:#f00"></li>
+                    <li style="background:#0f0"></li>
+                    <li style="background:#00f"></li>
+                    <li style="background:#ff0"></li>
+                </ul>
+            </div>
+            <p class="right-btn"> > </p>
+        </div>
+        <div class="content">
+            <p class="left-btn"> < </p>
+            <div class="list">
+                <ul>
+                    <li style="background:#f00"></li>
+                    <li style="background:#0f0"></li>
+                    <li style="background:#00f"></li>
+                    <li style="background:#ff0"></li>
+                    <li style="background:#0ff"></li>
+                </ul>
+            </div>
+            <p class="right-btn"> > </p>
+        </div>
+        <div class="content">
+            <p class="left-btn"> < </p>
+            <div class="list">
+                <ul>
+                    <li style="background:#f00"></li>
+                    <li style="background:#0f0"></li>
+                    <li style="background:#00f"></li>
+                    <li style="background:#ff0"></li>
+                    <li style="background:#0ff"></li>
+                    <li style="background:#0ff"></li>
+                </ul>
+            </div>
+            <p class="right-btn"> > </p>
+        </div>
+
+        <div class="content">
+            <p class="left-btn"> < </p>
+            <div class="list">
+                <ul>
+                    <li style="background:#f00"></li>
+                    <li style="background:#0f0"></li>
+                    <li style="background:#00f"></li>
+                    <li style="background:#ff0"></li>
+                    <li style="background:#0ff"></li>
+                    <li style="background:#0ff"></li>
+                    <li style="background:#f0f"></li>
+                </ul>
+            </div>
+            <p class="right-btn"> > </p>
+        </div>
+
+        <div class="content">
+            <p class="left-btn"> < </p>
+            <div class="list">
+                <ul>
+                    <li style="background:#f00"></li>
+                    <li style="background:#0f0"></li>
+                    <li style="background:#00f"></li>
+                </ul>
+            </div>
+            <p class="right-btn"> > </p>
+        </div>
+
+        <div class="content">
+            <p class="left-btn"> < </p>
+            <div class="list">
+                <ul>
+                    <li style="background:#f00"></li>
+                </ul>
+            </div>
+            <p class="right-btn"> > </p>
+        </div>
+
+    </div>
+
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+   /* $(function(){
+
+        //let arr=["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+        function transformationYMD(ymd) {
+            let datetime = new Date(ymd);
+            d = datetime . getUTCDate() + 1 ;
+            y = datetime . getUTCFullYear();
+            mm = datetime . toDateString().split(' ')[1];
+            return mm , d +',' , y;
+        }
+        transformationYMD('2016-3-20');
+
+        function transformationHS(hs){
+            let idx=hs.lastIndexOf(':'),
+                str = hs.slice(0,idx);
+            return str;
+        }
+        transformationHS('15:20:00');
+
+        function f1(){
+            let n = 5;
+            if(true){
+                let n = 10;
+            }
+            console.log(n); // 5
+        }
+        f1();
+
+        function f2(){
+            var m = 5;
+            if(true){
+                var m = 10;
+            }
+            console.log(m); // 10
+        }
+        f2();
+
+
+
+
+        function f() { console.log('I am outside!'); }
+        (function () {
+            if (false) {
+                // 重复声明一次函数f
+                function f() { console.log('I am inside!'); }
+            }
+
+            //f();
+        }());
+
+
+    })*/
+
+    $(function(){
+
+        $('#box ul').each(function(i,obj){
+            var num = $(obj).find('li').length,
+                ele = $(obj),
+                marginleft = ele.css('margin-left').split('px')[0]*1,
+                v = (num - 3)* (-40),
+                w = 40*num;
+            $(obj).css('width',w);
+            if(num <= 3){
+                ele.closest('.content').find('.left-btn').addClass('none');
+                ele.closest('.content').find('.right-btn').addClass('none');
+            }else{
+                if(marginleft == 0){
+                    ele.closest('.content').find('.left-btn').addClass('none');
+                }else if(marginleft == v){
+                    ele.closest('.content').find('.right-btn').addClass('none');
+                }
+            }
+        })
+        //  点击右按钮
+        $('#box').on('click','.right-btn',function(){
+            var _this = $(this),
+                list = _this.prev().find('ul'),
+                num = _this.prev().find('ul>li').length,
+                otherNum = Math.floor(num - 3),
+                _otherBth = _this.closest('.content').find('.left-btn'),
+                marginleft = list.css('marginLeft').split('px')[0]*1;
+
+            if(otherNum < 0){
+                marginleft = marginleft;
+            }else if(otherNum > 3){
+                marginleft += -40 * 3;
+            }else{
+                marginleft += -40 * otherNum;
+                _this.addClass('none');
+                _otherBth.removeClass('none');
+            }
+//            list.css({
+//                'marginLeft': marginleft+'px',
+//                'transition':"all 1s"
+//            })
+            list.animate({
+                'marginLeft': marginleft+'px'
+            },500)
+
+        })
+
+
+        // 点击左按钮
+        $('#box').on('click','.left-btn',function(){
+            var _this = $(this),
+                    list = _this.next().find('ul'),
+                    num = _this.next().find('ul>li').length,
+                    otherNum = Math.floor(num - 3),
+                    _otherBth = _this.closest('.content').find('.right-btn'),
+                    marginleft = list.css('marginLeft').split('px')[0]*1;
+
+            if(otherNum < 0){
+                marginleft = 0;
+            }else if(otherNum > 3){
+                marginleft += 40*3;
+            }else{
+                marginleft += 40*otherNum;
+                _this.addClass('none');
+                _otherBth.removeClass('none');
+            }
+
+            list.animate({
+                'marginLeft': marginleft+'px'
+            },500)
+
+        })
+    })
+
+</script>
+</body>
+</html>

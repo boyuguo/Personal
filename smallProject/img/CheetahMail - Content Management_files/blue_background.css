@@ -1,0 +1,35 @@
+body { 
+    background: url(/images/bg4.png) no-repeat -4px 0 #3f79ad;
+}
+.cm_footer { 
+    height:86px;
+    margin-top:10px; 
+    behavior: url(/css/PIE.htc);
+    border-radius: 0 0 10px 10px;
+}
+#cm_header_wrapper {
+    background: none;
+}
+#menu_container #navlist .cm_menu_buttons {
+    border:1px solid #fff;
+    border-width:1px 1px 0 1px;
+}
+html * #menu_container #navlist .cm_menu_buttons {
+    margin-top:6px;
+}
+#cm_user_info, #cm_user_info span {
+    color:#fff;
+}
+#cm_header_links .bar_separator, #cm_header_links .header_links a {
+    color:#fff;
+}
+#cm_client_logo td { 
+    text-align: center; 
+    vertical-align: middle;
+    background: #fff;
+    height:64px !important;
+}
+#cm_header_left { padding: 0; }
+.app_title { color:#135695; }
+#app_wrapper.foot_no_space { padding-bottom: 0; }
+#app_wrapper { border-radius: 10px 10px 0 0; }

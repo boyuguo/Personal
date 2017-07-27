@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		*,*:after,*:before{
+			-webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
+		html,body{
+			width:100%;
+			height:100%;
+		}
+		.container{
+			overflow:hidden;
+		}
+		.box{
+			width:510px;
+			height:675px;
+			margin:30px;
+			background:#eee;
+			float:left;
+		}
+		figure{
+			position: relative;
+		    overflow: hidden;
+		    background: #000000;
+		    text-align: center;
+		    cursor:pointer;
+		}
+		.imgStyle{
+			position: relative;
+    		display: block;
+    		opacity: 0.8;
+    		width: calc(100% + 60px);
+    		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		    transition: opacity 0.35s, transform 0.35s;
+		    -webkit-transform: translate3d(-50px,0,0);
+		    transform: translate3d(-50px,0,0);
+		    -moz-transform: translate3d(-50px,0,0);
+		    -o-transform: translate3d(-50px,0,0);
+		    -ms-transform: translate3d(-50px,0,0);
+		}
+		figcaption{
+			padding: 3em;
+		    text-align: right;
+		    border: 13px solid rgba(255, 255, 255, 0.15);
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+		figcaption:before{
+			position: absolute;
+		    top: 30px;
+		    right: 30px;
+		    bottom: 30px;
+		    left: 30px;
+		    border: 4px solid #fff;
+		    content: '';
+		    opacity: 0;
+		    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		    transition: opacity 0.35s, transform 0.35s;
+		    -webkit-transform: translate3d(-20px,0,0);
+		    transform: translate3d(-20px,0,0);
+		    -ms-transform: translate3d(-20px,0,0);
+		    -moz-transform: translate3d(-20px,0,0);
+		    -o-transform: translate3d(-20px,0,0);
+		}
+		h3{
+		    padding: 1.5em 0 .5em;
+		    font-size: 1.7em;
+		    color: #fff;
+		    text-transform: uppercase;
+		    letter-spacing: 5px;
+		}
+		h3 span{
+			font-weight: 800;
+    		color: #e71f30;
+		}
+		p{
+			letter-spacing: 12px;
+		    color: #fff;
+		    line-height: 2em;
+		    font-size: 1.1em;
+		    opacity: 0;
+		    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		    transition: opacity 0.35s, transform 0.35s;
+		    -webkit-transform: translate3d(-10px,0,0);
+		    transform: translate3d(-10px,0,0);
+		}
+
+		figure:hover img{
+			opacity: 0.7;
+		    -webkit-transform: translate3d(0,0,0);
+		    transform: translate3d(0,0,0);
+		}
+		figure:hover figcaption::before,
+		figure:hover p {
+		    opacity: 1;
+		    -webkit-transform: translate3d(0,0,0);
+		    transform: translate3d(0,0,0);
+		}
+
+		.box1{
+			width:562px;
+			height:482px;
+			margin:30px;
+			position:relative;
+			cursor:pointer;
+			float:left;
+		}
+		.ziColor{
+			display:block;
+			width:562px;
+			height:482px;
+			background:#96519e;
+			position:absolute;
+			left:0;
+			top:0;
+			opacity:0.4;
+		}
+		.ziText{
+			display:block;
+			width:562px;
+			height:482px;
+			position:absolute;
+			left:0;
+			top:0;
+			background:url('./images/like1_t.png') no-repeat;
+			background-size:100% 100%;
+		}
+		.box1:hover .ziColor{
+			opacity: 0.2;
+		}
+		.box2{
+			width:570px;
+			height:296px;
+			margin:30px;
+			float:left;
+			cursor:pointer;
+		}
+		.box2 img{
+			display:block;
+			width:100%;
+		}
+		.box2 .overlay:before{
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(255,255,255,0.3);
+		    content: '';
+		    transition: transform 0.6s;
+		    -moz-transform: scale3d(1.9,3,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+		    -ms-transform: scale3d(1.9,3,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+		    -o-transform: scale3d(1.9,3,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+		    -webkit-transform: scale3d(1.9,3,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+		    transform: scale3d(1.9,3,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+		    will-change: transform;
+		}
+		.box2:hover .overlay:before{
+			transform: scale3d(0.16,0.25,0.09) rotate3d(0,0,1,0) translate3d(0,-100%,0);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<figure>
+				<img src="./images/bb1.jpg" alt="" class='imgStyle'>	
+				<figcaption>
+					<h3>
+						<span>S</span>ALE
+					</h3>
+					<p>Upto 55%</p>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="box1">
+			<img src="images/like1.jpg" alt="">
+			<a href="javascript:;" target="_blank" class="ziColor"></a>
+			<a href="javascript:;" target="_blank" class="ziText"></a>
+		</div>
+		<div class="box2">
+			<img src="./images/box2-img1.jpg" alt="">
+			<span class='overlay'></span>
+		</div>
+	</div>
+	
+</body>
+</html>

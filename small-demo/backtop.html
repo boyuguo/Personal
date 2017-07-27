@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>back top</title>
+	<style>
+		*{
+			padding:0;margin:0;
+		}
+		html,body,{width:100%;height:100%;overflow:hidden;}
+		/*父子关系*/
+		.box{
+			position:fixed;right:0;bottom:20px;width:20px;height:20px;
+		}
+		.red{width:20px;height:20px;background:#f00;position:relative;z-index:2;cursor:pointer;}
+		.green{
+			width:60px;height:20px;background:#0f0;position:absolute;left:0;top:0;z-index:1;color:#fff;line-height:20px;-webkit-transition:all 0.6s ease-in-out;-webkit-transform:translate(0,0);
+		}
+		.red:hover{
+			background:#0f0;
+		}
+		.red:hover~.green{
+			-webkit-transform:translate(-40px,0);
+		}
+		/*兄弟关系*/
+		.content{position:fixed;left:0;bottom:20px;width:20px;height:20px;}
+		.con{width:20px;height:20px;position:relative;}
+		.con span{display:block;position:relative;z-index:2;background:#f00;cursor:pointer;overflow:hidden;width:20px;height:20px;}
+		.con b{display:block;position:absolute;left:0;top:0;-webkit-transform:translate(-40px,0);background:#0f0;
+			color:#fff;line-height:20px;z-index:1;width:60px;height:20px;text-align:right;-webkit-transition:all 0.6s ease-in-out;}
+		.con:hover>span{
+			background:#0f0;
+		}
+		.con:hover>b{
+			-webkit-transform:translate(0px,0);
+		}
+	</style>
+</head>
+<body>
+	
+<!-- 兄弟关系 -->
+<div class="box">
+	<div class="red">⬆️</div>
+	<div class="green">内容</div>
+</div>
+<!-- 父子关系 -->
+<div class="content">
+	<div class="con">
+	    <span>⬆️</span>
+	    <b>内容</b>
+	</div>
+</div>
+
+<script src="../js/jquery-3.1.0.min.js"></script>
+
+
+<script >
+	
+	/* 定义函数 myFunc */
+	function myFunc(theObject)
+	{
+	   //实参 mycar 和形参 theObject 指向同一个对象.
+	   theObject.brand = "Toyota";
+	}
+	 
+	/*
+	 * 定义变量 mycar;
+	 * 创建并初始化一个对象;
+	 * 将对象的引用赋值给变量 mycar
+	*/
+	var mycar = {
+	   brand: "Honda",
+	   model: "Accord",
+	   year: 1998
+	};
+
+	/* 弹出 'Honda' */
+	//window.alert(mycar.brand);
+
+	/* 将对象引用传给函数 */
+	myFunc(mycar);
+
+	/*
+	 * 弹出 'Toyota',对象的属性已被修改.
+	 */
+	console.log(mycar.brand);
+
+
+	// var materials = [
+	//   'Hydrogen',
+	//   'Helium',
+	//   'Lithium',
+	//   'Beryllium'
+	// ];
+
+	// materials.map(function(v){
+	// 	return console.log(v.length);
+	// })
+
+	// materials.map((i,v)=>{
+	// 	return console.log(i,'this is i',v);
+	// })
+
+	// function Person(){
+	// 	this.age = 0;
+	// 	setInterval(function growUp(){
+	// 		this.age ++;
+	// 	},1000)
+	// }
+
+	// var p = new Person();
+	// console.log(p)
+
+	// function Person1(){
+	// 	var that = this;
+	// 	that.age = 0;
+	// 	setInterval(function growUp(){
+	// 		that.age ++;
+	// 	},1000)
+	// }
+
+	// var p1 = new Person1();
+	// console.log(p1)
+
+
+	// function Person2(){
+	// 	this.age = 0;
+	// 	setInterval(()=>{
+	// 		this.age ++
+	// 	},1000)
+	// }
+
+	// var p2 = new Person2();
+	// console.log(p2);
+
+	// var adder = {
+	// 	base : 1,
+
+	// 	add : function(a){ 
+	// 		var f = v => v + this.base;
+	// 		return f(a)
+	// 	},
+
+	// 	addThruCall : function(a){
+	// 		var f = v => v + this.base;
+	// 		var b = {
+	// 			base : 2
+	// 		};
+	// 		return f.call(b,a);
+	// 	}
+	// }
+
+	// console.log(adder.add(1))
+	// console.log(adder.addThruCall(1));
+
+
+	// var arguments = 42;
+	// var arr = () => arguments;
+	// arr();
+	// console.log(arr())  // 42
+
+	
+	/*  //  arguments[0]  ???
+	function foo(){
+		var f = (i) => arguments[0] +i;
+
+		return f(2);
+	}
+
+	foo(1)
+	console.log(foo(1));
+	*/
+
+	function foo(){
+		var f = (...args) => args[0];
+		return f(2);
+	}
+	foo();
+	console.log(foo())  // 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

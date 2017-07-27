@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>small demo</title>
+	<style>
+		*{margin:0;padding:0;}
+		html,body{width:100%;height:100%;font-size:12px;}
+		body{
+			font-family: Arial,Helvetica,sans-serif!important;
+    		font-size: 12px;
+    		color: #222;
+    		line-height: 1.42857143;
+    		background:#efefef;
+    	}
+		*,*:before,*:after{box-sizing:border-box;}
+		.wrap-box{width:1200px;height:100%;margin:0 auto;background:#fff;padding:20px;}
+		.header-box{overflow:hidden;padding-bottom:20px;}
+		.header-box .header-le,.header-box .header-ri{width:200px; height:50px;border:2px solid #f00;float:left;}
+		.header-box .header-ri{float:right;}
+		.content-box{padding:30px;overflow:hidden;min-height:500px;border:3px solid #000;}
+		.content-box .content-le{float:left;width:50%;}
+		.content-box .content-le .txt{border:2px solid #f00;width:300px;height:200px;margin-top:220px;}
+		.content-box .content-ri-list{float:left;width:50%;list-style: none;}
+		.content-box .content-ri-list .item{width:400px;height:200px;border:2px solid #f00;margin:20px 0;}
+	</style>
+</head>
+<body>
+	<div class="wrap-box">
+		<div class="header-box">
+			<div class="header-le"></div>
+			<div class="header-ri"></div>
+		</div>
+		<div class="content-box">
+			<div class="content-le">
+				<p class="txt"></p>
+			</div>
+			<ul class="content-ri-list">
+				<li class="item"></li>
+				<li class="item"></li>
+				<li class="item"></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

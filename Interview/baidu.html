@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断三个数字是否能组成三角</title>
+</head>
+<body>
+
+
+<script src="../jquery-3.1.0.min.js"></script>
+
+<script>
+	// 问题一：封装一个方法判断三个数字是否能组成三角
+
+	function isTriangle(a,b,c){
+		if(a>0 && b>0 && c>0){
+			if(a+b>c && a+c>b && b+c>a && a-b<c && b-a<c && a-c<b && c-a<b && b-c<a && c-b<a){
+				console.log('ok');
+			}else{
+				console.log('no');
+			}
+		}
+	}
+
+	isTriangle(5,5,5);
+
+
+
+
+
+
+
+</script>
+
+
+
+
+	
+</body>
+</html>

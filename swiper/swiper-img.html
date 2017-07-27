@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>swiper-img</title>
+	<link rel="stylesheet" href="swiper-3.4.1.min.css">
+	<style>
+		*{margin:0;padding:0;}
+		html,body{width:100%;height:100%;overflow:hidden;}
+		.container{width:1800px;height:100%;margin:30px auto;border:1px solid #ccc;}
+		.only-small-img{padding:10px 0;background:#000;}
+		.only-small-img .swiper-wrapper .swiper-slide{width:16%;margin-right:10px;opacity:0.4;}
+		.only-small-img .swiper-wrapper .swiper-slide img{width:100%;height:auto;}
+		.only-small-img .swiper-wrapper .swiper-slide-active{opacity:1;}
+	</style>
+</head>
+<body>
+
+	<div class="container" id="container">
+		<div class="swiper-container only-big-img">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/1.jpg" alt="img1"></div>
+				<div class="swiper-slide"><img src="img/2.jpg" alt="img2"></div>
+				<div class="swiper-slide"><img src="img/3.jpg" alt="img3"></div>
+				<div class="swiper-slide"><img src="img/4.jpg" alt="img4"></div>
+				<div class="swiper-slide"><img src="img/5.jpg" alt="img5"></div>
+				<div class="swiper-slide"><img src="img/6.jpg" alt="img6"></div>
+				<div class="swiper-slide"><img src="img/7.jpg" alt="img7"></div>
+				<div class="swiper-slide"><img src="img/8.jpg" alt="img8"></div>
+				<div class="swiper-slide"><img src="img/9.jpg" alt="img9"></div>
+			</div>
+		</div>
+
+		<div class="swiper-container only-small-img">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/1.jpg" alt="img1"></div>
+				<div class="swiper-slide"><img src="img/2.jpg" alt="img2"></div>
+				<div class="swiper-slide"><img src="img/3.jpg" alt="img3"></div>
+				<div class="swiper-slide"><img src="img/4.jpg" alt="img4"></div>
+				<div class="swiper-slide"><img src="img/5.jpg" alt="img5"></div>
+				<div class="swiper-slide"><img src="img/6.jpg" alt="img6"></div>
+				<div class="swiper-slide"><img src="img/7.jpg" alt="img7"></div>
+				<div class="swiper-slide"><img src="img/8.jpg" alt="img8"></div>
+				<div class="swiper-slide"><img src="img/9.jpg" alt="img9"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<input type="text" id='inp'/>
+
+	
+	
+	<script src="../js/jquery-3.1.0.min.js"></script>
+	<script src="swiper-3.4.1.min.js"></script>
+	<script>
+		
+		var galleryTop = new Swiper ('.only-big-img', {
+		    autoplay: 5000,  // 自动切换的时间间隔
+		    autoplayDisableOnInteraction: false, // 用户操作swiper之后，是否禁止autoplay。如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+		    spaceBetween: 10
+		});
+		var galleryThumbs = new Swiper('.only-small-img', {
+			spaceBetween: 10,
+			centeredSlides: true, // 设定为true时，活动块会居中，而不是默认状态下的居左。
+			slidesPerView: 'auto', //  设置slider容器能够同时显示的slides数量(carousel模式)。可以设置为number或者 'auto'则自动根据slides的宽度来设定数量。
+			slideToClickedSlide: true // 设置为true则点击slide会过渡到这个slide。
+		});
+
+		// 双向控制
+		galleryTop.params.control = galleryThumbs;
+		galleryThumbs.params.control = galleryTop;
+
+
+
+
+	</script>
+</body>
+</html>

@@ -8,13 +8,20 @@
 		*,*:after,*:before{box-sizing: border-box;}
 		html,body{width:100%;height:100%;}
 		.container{width:500px;height:500px;margin:100px auto;padding:20px;}
-		.form-control,.form-item{border:1px solid #ccc;overflow: hidden;position: relative;}
-		.label{float: left;width: 90px;height: 46px;line-height: 46px;padding-left: 20px;text-align:justify;text-align-last: justify;}
+		.form-control,.form-item{border:1px solid #ccc;position: relative;clear:both;}
+		.label{float: left;width: 90px;height: 46px;line-height: 46px;padding-left: 20px;text-align:justify;text-align-last: justify;cursor:pointer;}
 		input{border: 0 none;font-size: 14px;width: 190px;height: 46px;padding-bottom: 11px;padding-left: 20px;padding-top: 16px;}
 		input:focus{outline:none;}
 		.inp_placeholder{position: absolute;z-index: 2;line-height: 46px;margin-left: 20px;margin-top: 1px;font-size: 14px;font-family: "Microsoft YaHei", "Hiragino Sans GB";color: rgb(204, 204, 204);display: inline;}
 		.hidden{display:none;}
 		.form-tip{color: #c5c5c5;height: 27px;font-size: 12px;padding-top: 5px;}
+		/* 第二种展示效果 */
+		.form-item .inp:invalid+label:before{content: attr(tip);position:absolute;left:0;top:0;}
+		.form-item .l{display:block;width:100%;position: absolute;left:90px;top:0;}
+		.form-item .l:after {content: '';position: absolute;left:-110px;top:46px;width:100%;}
+		.form-item .inp:focus+label:before{content: '';}
+		.form-item .inp:focus+label:after{content: attr(default);}
+		
 	</style>
 </head>
 <body>
@@ -32,6 +39,14 @@
 				<input type="text" class='inp' default='<i class="i-def"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符'>
 			</div>
 			<div class="form-tip"><span></span></div>
+		</form>
+		<!-- 第二种写法纯css处理 -->
+		<form action="">
+			<div class="form-item">
+				<span for="user-name" class='label'>用户名</span>
+				<input type="text" class='inp' id='user-name' required>
+				<label for="user-name" class='l inp_placeholder' tip='您的账户名和登录名' default='支持中文、字母、数字、“-”“_”的组合，4-20个字符'></label>
+			</div>
 		</form>
 	</div>
 
@@ -56,10 +71,13 @@
 				inp.focus();  
 			}
 			p.next('.form-tip').find('span').html(tips);
-			var v = inp.val().length;
 			inp.blur(function(){
+				var v = inp.val().length;
 				if(v == 0){
 					txt.removeClass('hidden');
+					p.next('.form-tip').find('span').html('');
+				}else{
+					txt.addClass('hidden');
 					p.next('.form-tip').find('span').html('');
 				}
 			})

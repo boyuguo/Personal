@@ -3,22 +3,24 @@ var path = require('path');
 提取css文本的插件
 */
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+var webpack = require('webpack');
 module.exports = {
   //编译的入口文件 ｛文件名：真实路径｝
   entry: {
   'app':'./demo/preventingTransitions.js'
   },
+  context: path.resolve(__dirname),
   //编译输出目录和文件名配置
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist' //对应输出目录的web路径
+      filename: 'dist/bundle.js',
+      path: path.resolve(__dirname),
+      publicPath: '/' //对应输出目录的web路径
   },
   devServer: {
-   // hot: true,//热编译，自动编译（目前编译无效，需要使用另外命令编译）
-    contentBase: path.resolve(__dirname),//server 打开的目录
-    publicPath: '/' //限制可访问的目录，地址 可以是数组
+      hot: true,//热编译，自动编译（目前编译无效，需要使用另外命令编译）
+      inline:true,
+      contentBase: path.resolve(__dirname)+'/src',//server 打开的目录
+      publicPath: '/' //限制可访问的目录，地址 可以是数组
   },
   //编译相关配置
   module:{
@@ -63,6 +65,7 @@ module.exports = {
 			filename:  (getPath) => {
 				return getPath('css/[name].css?v=[chunkhash]').replace('css/js', 'css');
 			}
-		})
+   }),
+       new webpack.HotModuleReplacementPlugin()
   ]
 };

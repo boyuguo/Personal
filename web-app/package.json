@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.config.js -w --progress --colors",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --devtool eval --progress --colors"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-router": "^4.1.1"
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.2"
   }
 }

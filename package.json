@@ -1,0 +1,23 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "Personal product",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --devtool eval --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boyuguo/Personal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boyuguo/Personal/issues"
+  },
+  "homepage": "https://github.com/boyuguo/Personal#readme",
+  "devDependencies": {
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}

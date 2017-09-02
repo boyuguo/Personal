@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Result</title>
+	<title>Template</title>
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/result.css">
+	<link rel="stylesheet" href="../css/template.css">
 </head>
 <body>
 	
-	<div class="container result-container">
+	<div class="container template-container">
 		<!-- common header start -->
 		<div class="header clearfix">
 			<div class="header-left">
@@ -66,10 +66,12 @@
 									<span>评估中心</span>
 								</a>
 							</li>
-							<li class="sub-menu-item item active">
-								<img src="../image/common/u1203.png" alt="" class="icon">
-								<img src="../image/common/u1828.png" alt="" class="white-icon">
-								<span>评估结果</span>
+							<li class="sub-menu-item item">
+								<a href="./result.html">
+									<img src="../image/common/u1203.png" alt="" class="icon">
+									<img src="../image/common/u1828.png" alt="" class="white-icon">
+									<span>评估结果</span>
+								</a>
 							</li>
 							<li class="sub-menu-item item">
 								<a href="./task.html">
@@ -78,12 +80,10 @@
 									<span>评估任务</span>
 								</a>
 							</li>
-							<li class="sub-menu-item item">
-								<a href="./template.html">
-									<img src="../image/common/u1187.png" alt="" class="icon">
-									<img src="../image/common/u3532.png" alt="" class="white-icon">
-									<span>评估模版</span>
-								</a>
+							<li class="sub-menu-item item active">
+								<img src="../image/common/u1187.png" alt="" class="icon">
+								<img src="../image/common/u3532.png" alt="" class="white-icon">
+								<span>评估模版</span>
 							</li>
 						</ol>
 					</div>
@@ -124,17 +124,14 @@
 		</div>
 		<!-- common left menu end -->
 
-		<!-- common result content start -->
+		<!-- common template content start -->
 		<div class="content-box">
-			<div class="result-content">
-				<div class="checkout-type-box">
-					 <span>选择类型:</span>
-					<span class="btn all-btn active">全部</span>
-					<span class="btn overall-btn">全面评估</span>
-					<span class="btn custom-btn">自定义评估</span>
+			<div class="template-content">
+				<div class="new-add-box">
+					<button class="btn new-add">新建模版</button>
 				</div>
-				<ul class="result-list">
-					<li class="result-list-item result-list-item-one">
+				<ul class="template-list">
+					<li class="template-list-item template-list-item-one">
 						<div class="btn del-btn">删除</div>
 						<div class="search-box">
 							<input type="text" placeholder=" 输入账号、时间、操作信息">
@@ -143,110 +140,94 @@
 							</div>
 						</div>
 					</li>
-					<li class="result-list-item result-list-item-second">
-						<div class="result-chx"><input type="checkbox"></div>
-						<span class="result-name">名称</span>
-						<span class="result-date">评估日期</span>
-						<span class="result-star">评星</span>
-						<span class="result-fraction">评分</span>
-						<span class="result-substance">评估内容</span>
-						<span class="result-type">评估类型</span>
-						<span class="result-operate">操作</span>
+					<li class="template-list-item template-list-item-second">
+						<div class="template-chx"><input type="checkbox"></div>
+						<span class="template-name">名称</span>
+						<span class="template-substance">评估内容</span>
+						<span class="template-date">生成日期</span>
+						<span class="template-user">制作人</span>
+						<span class="template-star">热度</span>
+						<span class="template-operate">操作</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
-						<span class="result-date">2017-06-05 21:23:34</span>
-						<span class="result-star">
+					<li class="template-list-item">
+						<div class="template-chx"><input type="checkbox"></div>
+						<a href="" class="template-name">全面评估模板1</a>
+						<span class="template-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="template-date">2017-06-05 21:23:34</span>
+						<span class="template-user">shusen</span>
+						<span class="template-star">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1265.png" alt="">
 						</span>
-						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
-						<span class="result-type">
-							<button class="btn type-btn">全面</button>
-							<button class="btn type-btn">自定义</button>
-						</span>
-						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+						<span class="template-operate">
+							<button class="btn complie-btn">编辑</button>
 						</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
-						<span class="result-date">2017-06-05 21:23:34</span>
-						<span class="result-star">
+
+					<li class="template-list-item">
+						<div class="template-chx"><input type="checkbox"></div>
+						<a href="" class="template-name">全面评估模板1</a>
+						<span class="template-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="template-date">2017-06-05 21:23:34</span>
+						<span class="template-user">shusen</span>
+						<span class="template-star">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1265.png" alt="">
 						</span>
-						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
-						<span class="result-type">
-							<button class="btn type-btn">全面</button>
-						</span>
-						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+						<span class="template-operate">
+							<button class="btn complie-btn">编辑</button>
 						</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
-						<span class="result-date">2017-06-05 21:23:34</span>
-						<span class="result-star">
+					<li class="template-list-item">
+						<div class="template-chx"><input type="checkbox"></div>
+						<a href="" class="template-name">全面评估模板1</a>
+						<span class="template-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="template-date">2017-06-05 21:23:34</span>
+						<span class="template-user">shusen</span>
+						<span class="template-star">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1265.png" alt="">
 						</span>
-						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
-						<span class="result-type">
-							<button class="btn type-btn">周期</button>
-							<button class="btn type-btn">自定义</button>
-						</span>
-						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+						<span class="template-operate">
+							<button class="btn complie-btn">编辑</button>
 						</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
-						<span class="result-date">2017-06-05 21:23:34</span>
-						<span class="result-star">
+					<li class="template-list-item">
+						<div class="template-chx"><input type="checkbox"></div>
+						<a href="" class="template-name">全面评估模板1</a>
+						<span class="template-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="template-date">2017-06-05 21:23:34</span>
+						<span class="template-user">shusen</span>
+						<span class="template-star">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1263.png" alt="">
 							<img src="../image/template/u1265.png" alt="">
 						</span>
-						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
-						<span class="result-type">
-							<button class="btn type-btn">自定义</button>
-						</span>
-						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+						<span class="template-operate">
+							<button class="btn complie-btn">编辑</button>
 						</span>
 					</li>
-					<li class="result-list-item result-list-item-last">
+					
+					<li class="template-list-item template-list-item-last">
 						<p>共 100 项</p>
 					</li>
-					<li class="result-list-item result-list-item-num">
+					<li class="template-list-item template-list-item-num">
 						翻页
 					</li>
 				</ul>
 					
 
 			</div>
+			
 		</div>
-		<!-- common result content end -->
+		<!-- common template content end -->
 	</div>
 
 
@@ -255,6 +236,6 @@
 	<script src='../js/jquery.validate.messages_zh.min.js'></script>
 	<script src='../js/tool.js'></script>
 	<script src='../js/common.js'></script>
-	<script src='../js/result.js'></script>
+	<script src='../js/template.js'></script>
 </body>
 </html>

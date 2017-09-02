@@ -1,0 +1,68 @@
+.log-content{
+	padding: 20px;
+}
+
+.log-list-item{
+	padding: 10px 20px;
+	overflow: hidden;
+	font-size: 12px;
+	line-height:26px;
+	border-bottom: 1px solid rgba(215, 215, 215, 1);
+}
+
+.log-list-item-one{
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(215, 215, 215, 1);
+	overflow: hidden;
+}
+
+.search-box{
+	float:right;
+	width:250px;
+	position: relative;
+}
+
+.search-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 34px;
+	height: 34px;
+}
+
+.log-list-item-second{
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(215, 215, 215, 1);
+	border-top: none;
+	overflow: hidden;
+}
+
+.log-account{
+	float:left;
+	width:20%;
+}
+
+.log-time{
+	float:left;
+	width:20%;
+}
+.log-jurisdiction{
+	float:left;
+	width:60%;
+}
+
+.log-list-item-last{
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(215, 215, 215, 1);
+	border-top: none;
+}
+.log-list-item-num{
+	border-bottom: none;
+}
+
+
+
+
+
+
+

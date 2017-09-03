@@ -358,3 +358,52 @@ input[type="checkbox"]{
 }
 
 /* form end */
+
+
+
+
+/* common data list start */
+
+.data-list{
+
+}
+.data-list-item{
+	padding: 10px 20px;
+	overflow: hidden;
+	font-size: 12px;
+	line-height:26px;
+	border-bottom: 1px solid rgba(215, 215, 215, 1);
+}
+
+.data-list-item-one{
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(215, 215, 215, 1);
+	overflow: hidden;
+}
+
+
+
+
+
+/* common data list end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

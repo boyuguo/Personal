@@ -10,6 +10,11 @@
 	border-bottom: 1px solid rgba(215, 215, 215, 1);
 }
 
+.task-list-item a{
+	color: #0080FF;
+}
+
+
 .task-list-item-one{
 	background-color: rgba(242, 242, 242, 1);
 	border: 1px solid rgba(215, 215, 215, 1);
@@ -39,6 +44,10 @@
 	float:right;
 	width:250px;
 	position: relative;
+}
+
+.search-box input{
+	padding-right: 26px;
 }
 
 .search-btn{

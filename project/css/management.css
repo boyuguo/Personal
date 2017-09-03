@@ -131,6 +131,10 @@
 	position: relative;
 }
 
+.search-box input{
+	padding-right: 26px;
+}
+
 .search-btn{
 	position: absolute;
 	right: 0;
@@ -147,12 +151,12 @@
 
 .system-chx{
 	float: left;
-	width:10%;
+	width:5%;
 	margin-top: 8px;
 }
 .system-account{
 	float: left;
-	width:10%;
+	width:13%;
 }
 .system-time{
 	float: left;
@@ -172,12 +176,12 @@
 }
 .system-tips{
 	float: left;
-	width:10%;
+	width:15%;
 
 }
 .system-operate{
 	float: left;
-	width:20%;
+	width:17%;
 }
 
 .system-list-item-last{

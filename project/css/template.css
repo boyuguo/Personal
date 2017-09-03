@@ -24,6 +24,11 @@
 	border-bottom: 1px solid rgba(215, 215, 215, 1);
 }
 
+.template-list-item a{
+	color: #0080FF;
+}
+
+
 .template-list-item-one{
 	background-color: rgba(242, 242, 242, 1);
 	border: 1px solid rgba(215, 215, 215, 1);
@@ -55,6 +60,10 @@
 	position: relative;
 }
 
+.search-box input{
+	padding-right: 26px;
+}
+
 .search-btn{
 	position: absolute;
 	right: 0;
@@ -71,7 +80,7 @@
 
 .template-chx{
 	float: left;
-	width: 10%;
+	width: 5%;
 	margin-top: 8px;
 }
 .template-name{
@@ -88,7 +97,7 @@
 }
 .template-user{
 	float: left;
-	width: 10%;
+	width: 15%;
 }
 
 .template-star{

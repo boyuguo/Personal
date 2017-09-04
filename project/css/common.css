@@ -33,7 +33,6 @@ html,body{
 .content-box{
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
 	padding: 60px 0 0 180px;
 }
 
@@ -42,8 +41,8 @@ html,body{
 }
 
 .clearfix:before,.clearfix:after {
-    content: " "; // 1
-    display: table; // 2
+    content: " ";
+    display: table;
 }
 .clearfix:after {
     clear: both;
@@ -375,17 +374,119 @@ input[type="checkbox"]{
 	border-bottom: 1px solid rgba(215, 215, 215, 1);
 }
 
+.data-list-item a{
+	color: #0080FF;
+}
+
 .data-list-item-one{
 	background-color: rgba(242, 242, 242, 1);
 	border: 1px solid rgba(215, 215, 215, 1);
 	overflow: hidden;
 }
 
+.btn-blue{
+	background: #FFF;
+	color: #3FA2FF;
+	border-radius: 5px;
+	padding: 2px 23px;
+	font-size: 14px;
+	border: 1px solid #3FA2FF;
+	margin: 4px 0;
+}
+
+.gray-btn{
+	background: #EFEFEF;
+	color: #AEAEAE;
+	border-radius: 8px;
+	padding: 2px 10px;
+	font-size: 14px;
+	border: 1px solid #CCC;
+	margin: 4px 0;
+}
+
+.search-box{
+	float:right;
+	width:250px;
+	position: relative;
+}
+
+.search-box input{
+	padding-right: 26px;
+}
+
+.search-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 34px;
+	height: 34px;
+}
+.data-list-item-second{
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(215, 215, 215, 1);
+	border-top: none;
+	overflow: hidden;
+}
+
+.data-list-item-last{
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(215, 215, 215, 1);
+	border-top: none;
+}
+
+.data-list-item-num{
+	border-bottom: none;
+}
+
+.data-chx{
+	float: left;
+	width:5%;
+	margin-top: 8px;
+}
+
+
 
 
 
 
 /* common data list end */
+
+
+/* dialog -- assess-term */
+
+.assess-term-list{
+	padding: 20px;
+	overflow: hidden;
+}
+.assess-term-item{
+	width: 25%;
+	margin-bottom: 10px;
+	float: left;
+}
+.assess-term-group{
+	padding-bottom: 15px;
+}
+.assess-term-item .title{
+	padding-bottom: 8px;
+}
+
+
+.assess-term-item .tips{
+	font-size: 12px;
+    color: #009900;
+    line-height: 24px;
+}
+
+.assess-term-item  .gray{
+	color: #A1A1A1;
+}
+
+.assess-term-item .tips img{
+	position: relative;
+	top: 3px;
+	margin-right: 3px;
+}
+
 
 
 

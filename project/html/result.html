@@ -5,6 +5,7 @@
 	<title>Result</title>
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layer.css">
 	<link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
@@ -129,13 +130,13 @@
 			<div class="result-content">
 				<div class="checkout-type-box">
 					 <span>选择类型:</span>
-					<span class="btn all-btn active">全部</span>
+					<span class="btn all-btn active">全部</span>  <!-- add active class ==> 被选中状态 -->
 					<span class="btn overall-btn">全面评估</span>
 					<span class="btn custom-btn">自定义评估</span>
 				</div>
-				<ul class="result-list">
-					<li class="result-list-item result-list-item-one">
-						<div class="btn del-btn">删除</div>
+				<ul class="data-list">
+					<li class="data-list-item data-list-item-one">
+						<div class="btn btn-blue del-btn">删除</div>
 						<div class="search-box">
 							<input type="text" placeholder=" 输入账号、时间、操作信息">
 							<div class="btn search-btn">
@@ -143,8 +144,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="result-list-item result-list-item-second">
-						<div class="result-chx"><input type="checkbox"></div>
+					<li class="data-list-item data-list-item-second">
+						<div class="data-chx"><input type="checkbox"></div>
 						<span class="result-name">名称</span>
 						<span class="result-date">评估日期</span>
 						<span class="result-star">评星</span>
@@ -153,9 +154,9 @@
 						<span class="result-type">评估类型</span>
 						<span class="result-operate">操作</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
+					<li class="data-list-item">
+						<div class="data-chx"><input type="checkbox"></div>
+						<a href="./particulars.html" target="_black" class="result-name">全面评估模板1</a>
 						<span class="result-date">2017-06-05 21:23:34</span>
 						<span class="result-star">
 							<img src="../image/template/u1263.png" alt="">
@@ -165,19 +166,19 @@
 							<img src="../image/template/u1265.png" alt="">
 						</span>
 						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="result-substance">资源性能评估等 <a href="javascript:;" class="assess-term">45项</a></span>
 						<span class="result-type">
-							<button class="btn type-btn">全面</button>
-							<button class="btn type-btn">自定义</button>
+							<button class="btn gray-btn">全面</button>
+							<button class="btn gray-btn">自定义</button>
 						</span>
 						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+							<button class="btn btn-blue again-btn">重新评估</button>
+							<button class="btn btn-blue download-btn">下载</button>
 						</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
+					<li class="data-list-item">
+						<div class="data-chx"><input type="checkbox"></div>
+						<a href="./particulars.html" target="_black"  class="result-name">全面评估模板1</a>
 						<span class="result-date">2017-06-05 21:23:34</span>
 						<span class="result-star">
 							<img src="../image/template/u1263.png" alt="">
@@ -186,18 +187,18 @@
 							<img src="../image/template/u1265.png" alt="">
 						</span>
 						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="result-substance">资源性能评估等 <a href="javascript:;" class="assess-term">45项</a></span>
 						<span class="result-type">
-							<button class="btn type-btn">全面</button>
+							<button class="btn gray-btn">全面</button>
 						</span>
 						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+							<button class="btn btn-blue again-btn">重新评估</button>
+							<button class="btn btn-blue download-btn">下载</button>
 						</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
+					<li class="data-list-item">
+						<div class="data-chx"><input type="checkbox"></div>
+						<a href="./particulars.html" target="_black"  class="result-name">全面评估模板1</a>
 						<span class="result-date">2017-06-05 21:23:34</span>
 						<span class="result-star">
 							<img src="../image/template/u1263.png" alt="">
@@ -206,19 +207,19 @@
 							<img src="../image/template/u1265.png" alt="">
 						</span>
 						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="result-substance">资源性能评估等 <a href="javascript:;" class="assess-term">45项</a></span>
 						<span class="result-type">
-							<button class="btn type-btn">周期</button>
-							<button class="btn type-btn">自定义</button>
+							<button class="btn gray-btn">周期</button>
+							<button class="btn gray-btn">自定义</button>
 						</span>
 						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+							<button class="btn btn-blue again-btn">重新评估</button>
+							<button class="btn btn-blue download-btn">下载</button>
 						</span>
 					</li>
-					<li class="result-list-item">
-						<div class="result-chx"><input type="checkbox"></div>
-						<a href="" class="result-name">全面评估模板1</a>
+					<li class="data-list-item">
+						<div class="data-chx"><input type="checkbox"></div>
+						<a href="./particulars.html" target="_black"  class="result-name">全面评估模板1</a>
 						<span class="result-date">2017-06-05 21:23:34</span>
 						<span class="result-star">
 							<img src="../image/template/u1263.png" alt="">
@@ -227,19 +228,19 @@
 							<img src="../image/template/u1265.png" alt="">
 						</span>
 						<span class="result-fraction">70.5</span>
-						<span class="result-substance">资源性能评估等 <a href="">45项</a></span>
+						<span class="result-substance">资源性能评估等 <a href="javascript:;" class="assess-term">45项</a></span>
 						<span class="result-type">
-							<button class="btn type-btn">自定义</button>
+							<button class="btn gray-btn">自定义</button>
 						</span>
 						<span class="result-operate">
-							<button class="btn again-btn">重新评估</button>
-							<button class="btn download-btn">下载</button>
+							<button class="btn btn-blue again-btn">重新评估</button>
+							<button class="btn btn-blue download-btn">下载</button>
 						</span>
 					</li>
-					<li class="result-list-item result-list-item-last">
+					<li class="data-list-item data-list-item-last">
 						<p>共 100 项</p>
 					</li>
-					<li class="result-list-item result-list-item-num">
+					<li class="data-list-item data-list-item-num">
 						翻页
 					</li>
 				</ul>
@@ -256,6 +257,7 @@
 	<script src='../js/jquery.validate.messages_zh.min.js'></script>
 	<script src='../js/tool.js'></script>
 	<script src='../js/common.js'></script>
+	<script src='../js/layer.js'></script>
 	<script src='../js/result.js'></script>
 </body>
 </html>

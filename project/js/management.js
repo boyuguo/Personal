@@ -8,6 +8,35 @@ $(function(){
 	})
 
 
+	$('.change-email-btn').on('click',function(){
+		layer.open({
+		  type: 1,
+		  area: ['420px', '300px'], //宽高
+		  title: 'Change Email',
+		  content: 'change email content '
+		});
+	})
+
+	$('.change-phone-btn').on('click',function(){
+		layer.open({
+		  type: 1,
+		  area: ['420px', '300px'], //宽高
+		  title: 'Phone Number',
+		  content: 'Phone Number content'
+		});
+	})
+
+	$('.change-pwd-btn').on('click',function(){
+		layer.open({
+		  type: 1,
+		  area: ['420px', '300px'], //宽高
+		  title: 'Password',
+		  content: 'Password content'
+		});
+	})
+		
+
+
 
 
 })

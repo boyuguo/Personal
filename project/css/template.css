@@ -16,73 +16,6 @@
 	border: 1px solid #3FA2FF;
 }
 
-.template-list-item{
-	padding: 10px 20px;
-	overflow: hidden;
-	font-size: 12px;
-	line-height:26px;
-	border-bottom: 1px solid rgba(215, 215, 215, 1);
-}
-
-.template-list-item a{
-	color: #0080FF;
-}
-
-
-.template-list-item-one{
-	background-color: rgba(242, 242, 242, 1);
-	border: 1px solid rgba(215, 215, 215, 1);
-	overflow: hidden;
-}
-
-.del-btn{
-	background: #FFF;
-	color: #3FA2FF;
-	border-radius: 5px;
-	padding: 6px 23px;
-	font-size: 14px;
-	border: 1px solid #3FA2FF;
-	margin: 4px 0;
-}
-.complie-btn{
-	background: #FFF;
-	color: #3FA2FF;
-	border-radius: 5px;
-	padding: 2px 23px;
-	font-size: 14px;
-	border: 1px solid #3FA2FF;
-	margin: 4px 0;
-}
-
-.search-box{
-	float:right;
-	width:250px;
-	position: relative;
-}
-
-.search-box input{
-	padding-right: 26px;
-}
-
-.search-btn{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 34px;
-	height: 34px;
-}
-.template-list-item-second{
-	background-color: rgba(242, 242, 242, 1);
-	border: 1px solid rgba(215, 215, 215, 1);
-	border-top: none;
-	overflow: hidden;
-}
-
-.template-chx{
-	float: left;
-	width: 5%;
-	margin-top: 8px;
-}
 .template-name{
 	float: left;
 	width: 15%;
@@ -109,15 +42,7 @@
 	width: 20%;
 }
 
-.template-list-item-last{
-	background-color: rgba(242, 242, 242, 1);
-	border: 1px solid rgba(215, 215, 215, 1);
-	border-top: none;
-}
 
-.template-list-item-num{
-	border-bottom: none;
-}
 
 
 

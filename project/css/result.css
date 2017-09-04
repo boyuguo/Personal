@@ -13,93 +13,17 @@ span.active{
 	font-size: 12px;
 }
 
-.result-list-item{
-	padding: 10px 20px;
-	overflow: hidden;
-	font-size: 12px;
-	line-height:26px;
-	border-bottom: 1px solid rgba(215, 215, 215, 1);
-}
-
-.result-list-item a{
-	color: #0080FF;
-}
-
-.result-list-item-one{
-	background-color: rgba(242, 242, 242, 1);
-	border: 1px solid rgba(215, 215, 215, 1);
-	overflow: hidden;
-}
-
-.type-btn{
-	background: #EFEFEF;
-	color: #AEAEAE;
-	border-radius: 8px;
-	padding: 2px 10px;
-	font-size: 14px;
-	border: 1px solid #CCC;
-	margin: 4px 0;
-}
-
-.del-btn{
-	background: #FFF;
-	color: #3FA2FF;
-	border-radius: 5px;
-	padding: 6px 23px;
-	font-size: 14px;
-	border: 1px solid #3FA2FF;
-	margin: 4px 0;
-}
-.again-btn,.download-btn{
-	background: #FFF;
-	color: #3FA2FF;
-	border-radius: 5px;
-	padding: 2px 23px;
-	font-size: 14px;
-	border: 1px solid #3FA2FF;
-	margin: 4px 0;
-}
-
-.search-box{
-	float:right;
-	width:250px;
-	position: relative;
-}
-
-.search-box input{
-	padding-right: 26px;
-}
-
-.search-btn{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 34px;
-	height: 34px;
-}
-.result-list-item-second{
-	background-color: rgba(242, 242, 242, 1);
-	border: 1px solid rgba(215, 215, 215, 1);
-	border-top: none;
-	overflow: hidden;
-}
-
-.result-chx{
-	float: left;
-	width: 5%;
-	margin-top: 8px;
-}
 .result-name{
 	float: left;
 	width: 10%;
 }
 .result-date{
 	float: left;
-	width: 14%;
+	width: 15%;
 }
 .result-star{
 	float: left;
-	width: 14%;
+	width: 15%;
 }
 .result-fraction{
 	float: left;
@@ -107,7 +31,7 @@ span.active{
 }
 .result-substance{
 	float: left;
-	width: 14%;
+	width: 15%;
 }
 .result-type{
 	float: left;
@@ -115,18 +39,10 @@ span.active{
 }
 .result-operate{
 	float: left;
-	width: 18%;
+	width: 20%;
 }
 
-.result-list-item-last{
-	background-color: rgba(242, 242, 242, 1);
-	border: 1px solid rgba(215, 215, 215, 1);
-	border-top: none;
-}
 
-.result-list-item-num{
-	border-bottom: none;
-}
 
 
 

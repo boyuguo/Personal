@@ -14,19 +14,61 @@
 	background: #FFF;
 	overflow: hidden;
 	padding: 56px 40px;
+	position: relative;
+}
+.progress-bar{
+	background: #C1C1C1;
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+}
+.progress-bar-scale{
+	display:block;
+	width: 10%;
+	height: 100%;
+	background: #12c800;
+	transition: width 0.8s ease-in-out;
 }
 
 .fraction-box{
 	float: left;
 	width: 15%;
+	position: relative;
+}
+.fraction-box .icon{
+	width: 86px;
+	height: 86px;
+	border-radius: 50%;
+	border: 3px dotted #ff9900;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	
+}
+
+.fraction-box-icon-animation{
+	animation: iconRotate 1s linear infinite;
+}
+
+@keyframes iconRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+  
 }
 
 .fraction-box span{
 	display: block;
 	width: 86px;
 	height: 86px;
-	border-radius: 50%;
-	border: 3px dotted #ff9900;
 	font-size: 36px;
 	color: rgb(255, 153, 0);
 	text-align: center;
@@ -45,6 +87,7 @@
 	font-size: 30px;
     color: rgb(255, 153, 0);
     font-weight: normal;
+    padding: 5px 0;
 }
 
 .tips-box .date{
@@ -56,12 +99,26 @@
 	float: left;
 	width: 25%;
 	padding: 20px 0;
+	position: relative;
 }
 
 .assess-btn{
 	background: #00C1DE;
 	color: #FFF;
 	font-size: 24px;
+}
+
+.custom-box{
+	margin-top: 2px;
+	position: absolute;
+	left: 0;
+	bottom: -18px;
+}
+.custom-btn{
+	width: 167px;
+	text-align: center;
+	background: #0099CC;
+	color: #FFF;
 }
 
 .core-top-right{
@@ -273,6 +330,126 @@
 .core-dialog-box .item img{
 	position: relative;
 	top: 3px;
+}
+
+.assess-dialog-box{
+	overflow: hidden;
+	padding: 20px;
+	height: 100%;
+}
+.assess-dialog-left{
+	float: left;
+	width: 350px;
+	height: 100%;
+}
+.assess-dialog-left .label-tips{
+	display: inline-block;
+	width: 80px;
+}
+.cycle-content .label-tips{
+	width: 34px;
+    margin-left: 20px;
+}
+
+.assess-dialog-left .inp{
+	width: 260px;
+    display: inline-block;
+}
+.assess-dialog-left .cycle-inp{
+	width: 48px;
+	display: inline-block;
+	margin-right: 5px;
+	text-align: center;
+}
+.select-btn{
+	background: #FFF;
+	margin-right:5px;
+	border: 1px solid #CCC;
+}
+.active-btn{
+	background: #1486ff;
+	border-color: #7ac1ff;
+	color: #FFF;
+}
+.assess-dialog-left .slt{
+	width: 260px;
+	height: 34px;
+}
+.assess-dialog-right{
+	float: right;
+	width: 730px;
+	height: 100%;
+}
+.dialog-right-title{
+	padding-bottom: 10px;
+}
+.assess-dialog-right .select-btn{
+	padding: 3px 12px;
+    margin-left: 10px;
+}
+.dialog-right-content{
+	background: #efefef;
+	border: 1px solid #ddd;
+}
+.dialog-right-content .allChecked{
+	padding: 10px;
+	overflow:hidden;
+}
+.preserve-template{
+	float: right;
+}
+.assess-dialog-menu-list{
+	background: #FFF;
+	padding: 10px;
+	height: 450px;
+	overflow-y: auto;
+}
+
+.dialog-right-content input[type="checkbox"]{
+	position: relative;
+    top: 5px;
+}
+
+.triangle{
+	cursor: pointer;
+	display:inline-block;
+	width:0;height:0;
+	overflow:hidden;
+	line-height:0;
+	font-size:0;
+	vertical-align:middle;
+	border-top:7px solid #999;
+	border-bottom:0 none;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
+}
+
+.assess-dialog-menu-list .item-content{
+	padding: 10px 20px;
+	overflow: hidden;
+	height: auto;
+}
+.assess-dialog-menu-list .item-content ul{
+	overflow: hidden;
+}
+.assess-dialog-menu-list .item-content ul li{
+	float: left;
+	margin-right: 20px;
+	padding: 8px 0;
+}
+.assess-dialog-menu-list label{
+	cursor: pointer;
+}
+
+.open .item-content{
+	height: 0;
+}
+
+.open .triangle{
+	border-left:7px solid #999;
+	border-right:0 none;
+	border-top:7px solid transparent;
+	border-bottom:7px solid transparent;
 }
 
 

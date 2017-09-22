@@ -6,7 +6,7 @@
 	padding-bottom: 20px;
 }
 
-span.active{
+.active-btn{
 	background: #158CD1;
 	color: #FFF;
 	padding: 6px 20px;

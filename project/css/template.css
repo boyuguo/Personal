@@ -42,6 +42,81 @@
 	width: 20%;
 }
 
+.template-dialog-box{
+	padding: 20px;
+}
+.template-title-box {
+	margin-bottom: 20px;
+}
+.template-title-box input{
+	display: inline-block;
+	width: 300px;
+	margin-left: 10px;
+}
+.dialog-right-content{
+	background: #efefef;
+	border: 1px solid #ddd;
+}
+.dialog-right-content .allChecked{
+	padding: 10px;
+	overflow:hidden;
+}
+.assess-dialog-menu-list{
+	background: #FFF;
+	padding: 10px;
+	height: 412px;
+	overflow-y: auto;
+}
+
+.dialog-right-content input[type="checkbox"]{
+	position: relative;
+    top: 5px;
+}
+
+.triangle{
+	cursor: pointer;
+	display:inline-block;
+	width:0;height:0;
+	overflow:hidden;
+	line-height:0;
+	font-size:0;
+	vertical-align:middle;
+	border-top:7px solid #999;
+	border-bottom:0 none;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
+}
+
+.assess-dialog-menu-list .item-content{
+	padding: 10px 20px;
+	overflow: hidden;
+	height: auto;
+}
+.assess-dialog-menu-list .item-content ul{
+	overflow: hidden;
+}
+.assess-dialog-menu-list .item-content ul li{
+	float: left;
+	margin-right: 20px;
+	padding: 8px 0;
+}
+.assess-dialog-menu-list label{
+	cursor: pointer;
+}
+
+.open .item-content{
+	height: 0;
+}
+
+.open .triangle{
+	border-left:7px solid #999;
+	border-right:0 none;
+	border-top:7px solid transparent;
+	border-bottom:7px solid transparent;
+}
+
+
+
 
 
 

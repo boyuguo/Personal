@@ -82,6 +82,9 @@ $(function(){
 		  			+'</ul>'
 		});
 	})
+
+	/*  类型选择 按钮切换 */
+	btnTabChangeEvent($('.checkout-type-box'),'.btn',false);
 		
 	
 

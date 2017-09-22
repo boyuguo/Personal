@@ -80,7 +80,7 @@
 								</a>
 							</li>
 							<li class="sub-menu-item item">
-								<a href="./template">
+								<a href="./template.html">
 									<img src="../image/common/u1187.png" alt="" class="icon">
 									<img src="../image/common/u3532.png" alt="" class="white-icon">
 									<span>评估模版</span>
@@ -118,6 +118,13 @@
 									<span>数据录入设置</span>
 								</a>
 							</li>
+							<li class="sub-menu-item item">
+								<a href="./config.html">
+									<img src="../image/common/u1185.png" alt="" class="icon">
+									<img src="../image/common/u1185.png" alt="" class="white-icon">
+									<span>指标配置</span>
+								</a>
+							</li>
 						</ol>
 					</div>
 				</li>
@@ -130,7 +137,10 @@
 			<div class="core-content">
 				<div class="core-top-box">
 					<div class="core-top-left">
-						<p class="fraction-box"><span>70</span></p>
+						<p class="fraction-box">
+							<em class="icon"></em>
+							<span class="fraction" id="fraction">100</span>
+						</p>
 						<div class="tips-box">
 							<p>
 								<span>
@@ -142,12 +152,24 @@
 									<img src="../image/common/u53.png" alt="">
 								</span>
 							</p>
-							<h5>您已有15天未进行评估了</h5>
+							<h5 class="text">您已有15天未进行评估了</h5>
 							<p class="date">评估日期 <span>2017-06-05 21:23:34</span></p>
 						</div>
 						<div class="assess-box">
-							<button class="btn assess-btn">全面评估</button>
-							<button class="btn assess-btn">V</button>
+							<div>
+								<button class="btn assess-btn entire-btn">全面评估</button>
+								<button class="btn assess-btn v-btn">V</button>
+							</div>
+							<div class="custom-box hidden">
+								<button class="btn custom-btn">自定义评估</button>
+							</div>
+							<div class="assess-report hidden">
+								<a href="./particulars.html" target="_blank" class="btn core-btn">查看评估报告</a>
+							</div>
+							
+						</div>
+						<div class="progress-bar hidden">
+							<span class="progress-bar-scale" id="progress-bar-scale"></span>
 						</div>
 					</div>
 					<div class="core-top-right">

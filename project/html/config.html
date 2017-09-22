@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Set up</title>
+	<title>Config</title>
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/setup.css">
+	<link rel="stylesheet" href="../css/config.css">
 </head>
 <body>
 	
-	<div class="container log-container">
+	<div class="container config-container">
 		<!-- common header start -->
 		<div class="header clearfix">
 			<div class="header-left">
@@ -87,13 +87,6 @@
 									<span>评估模版</span>
 								</a>
 							</li>
-							<li class="sub-menu-item item">
-								<a href="./config.html">
-									<img src="../image/common/u1185.png" alt="" class="icon">
-									<img src="../image/common/u1185.png" alt="" class="white-icon">
-									<span>指标配置</span>
-								</a>
-							</li>
 						</ol>
 					</div>
 					
@@ -119,17 +112,17 @@
 									<span>操作日志</span>
 								</a>
 							</li>
+							<li class="sub-menu-item item">
+								<a href="./setup.html">
+									<img src="../image/common/u1185.png" alt="" class="icon">
+									<img src="../image/common/u1185.png" alt="" class="white-icon">
+									<span>数据录入设置</span>
+								</a>
+							</li>
 							<li class="sub-menu-item item active">
 								<img src="../image/common/u1185.png" alt="" class="icon">
 								<img src="../image/common/u1185.png" alt="" class="white-icon">
-								<span>数据录入设置</span>
-							</li>
-							<li class="sub-menu-item item">
-								<a href="./config.html">
-									<img src="../image/common/u1185.png" alt="" class="icon">
-									<img src="../image/common/u1185.png" alt="" class="white-icon">
-									<span>指标配置</span>
-								</a>
+								<span>指标配置</span>
 							</li>
 						</ol>
 					</div>
@@ -138,91 +131,70 @@
 		</div>
 		<!-- common left menu end -->
 
-		<!-- common setup content start -->
+		<!-- common log content start -->
 		<div class="content-box">
-			<div class="setup-content">
-				<h3 class="title">数据设置</h3>
-				<div class="sub-box download-content">
-					<p>备件设置</p>
-					<p>
-						<span>备件表</span>
-						<a href="">模板下载</a>
-					</p>
-					<p>
-						<a href="">导入</a>
-					</p>
+			<div class="config-content">
+				<div class="config-btn-box">
+					<button class="btn btn-blue btn-compile">编辑</button>
+					<button class="btn btn-blue btn-cancel hidden">取消</button>
+					<button class="btn btn-blue btn-conserve hidden">保存</button>
 				</div>
-				
-				<h3 class="title">数据采集设置</h3>
-				<div class="sub-box data-setup">
-					<label><input class="mui-switch mui-switch-anim" type="checkbox" checked> <span>采集开启</span></label>
-					<h6 class="time">采集时间设置</h6>
-					<p class="setup-time">
-						<label for="">周期:</label>
-						<select name="" id="">
-							<option value="0">请选择</option>
-							<option value="1">每天</option>
-							<option value="2">每周</option>
-						</select>
-						<label for="">开始时间:</label>
-						<input type="text" placeholder="00:00:00">
-					</p>
+				<ul class="data-list">
+					<li class="data-list-item data-list-item-one">
+						<div class="search-box">
+							<input type="text" placeholder=" 输入账号、时间、操作信息">
+							<div class="btn search-btn">
+								<img src="../image/management/u3609.png" alt="">
+							</div>
+						</div>
+					</li>
+					<li class="data-list-item data-list-item-second">
+						<span class="config-name">名称</span>
+						<span class="config-type">评估类型</span>
+						<span class="config-weight">权重</span>
+						<span class="config-threshold">阈值</span>
+					</li>
+					<li class="data-list-item">
+						<span class="config-name">单段链路CIR带宽利用率</span>
+						<span class="config-type">链路资源评估</span>
+						<span class="config-weight">1%</span>
+						<span class="config-threshold">预警值≥  <input type="text" value="70%" class="inp"/>   告警值≥ <input type="text" value="80%" class="inp"/></span>
+					</li>
+					<li class="data-list-item">
+						<span class="config-name">单段链路CIR带宽利用率</span>
+						<span class="config-type">链路资源评估</span>
+						<span class="config-weight">1%</span>
+						<span class="config-threshold">比值:  <input type="text" value="1" class="inp"/>  <em>（比例值与分数的百分比1）</em></span>
+					</li>
+					<li class="data-list-item">
+						<span class="config-name">单段链路CIR带宽利用率</span>
+						<span class="config-type">链路资源评估</span>
+						<span class="config-weight">1%</span>
+						<span class="config-threshold">GE预警值≥ <input type="text" value="30%" class="inp"/>   非GE预警值≥ <input type="text" value="50%" class="inp"/></span>
+					</li>
+					<li class="data-list-item">
+						<span class="config-name">单段链路CIR带宽利用率</span>
+						<span class="config-type">链路资源评估</span>
+						<span class="config-weight">1%</span>
+						<span class="config-threshold">预警值≥ <input type="text" value="10%" class="inp"/>   告警值≥ <input type="text" value="20%" class="inp"/></span>
+					</li>
+					<li class="data-list-item">
+						<span class="config-name">单段链路CIR带宽利用率</span>
+						<span class="config-type">链路资源评估</span>
+						<span class="config-weight">1%</span>
+						<span class="config-threshold">温度正常范围: <input type="text" value="5°c " class="inp"/>  至 <input type="text" value="50°c " class="inp"/> 电压正常范围: <input type="text" value="-57" class="inp"/> 至 <input type="text" value="-41" class="inp"/></span>
+					</li>
+					<li class="data-list-item data-list-item-last">
+						<p>共 100 项</p>
+					</li>
+					<li class="data-list-item data-list-item-num">
+						翻页
+					</li>
+				</ul>
 					
-				</div>
-
-				<h3 class="title">FTP设置<span>*</span></h3>
-				<form action="" class="setup-form1 sub-box">
-					<div class="form-group">
-						<input type="text" name="ip" class="form-control" placeholder="IP">
-					</div>
-					<div class="form-group">
-						<input type="text" name="account" class="form-control" placeholder="帐号">
-					</div>
-					<div class="form-group">
-						<input type="password" name="password" class="form-control" placeholder="密码">
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-blue">验证</button>
-					</div>
-				</form>
-
-				<h3 class="title">SSH设置</h3>
-				<div class="setup-sub-form">
-					<p class="sub-title">CiTRANS 680设备设置</p>
-					<form action="" class="setup-form2">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder=" 端口">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder=" 密码">
-						</div>
-					</form>
-				</div>
-				<div class="setup-sub-form">
-					<p class="sub-title">CiTRANS 690设备设置</p>
-					<form action="" class="setup-form3">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder=" 端口">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder=" 用户名">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder=" 密码">
-						</div>
-					</form>
-				</div>
-
-
-				<h3 class="title">私有协议</h3>
-				<div class="sub-box protocol-box">
-					私有协议 私有协议 私有协议 私有协议 私有协议 私有协议 私有协议 私有协议 私有协议 私有协议
-				</div>
-				
-				
 			</div>
 		</div>
-		<!-- common setup content end -->
+		<!-- common log content end -->
 	</div>
 
 
@@ -231,6 +203,6 @@
 	<script src='../js/jquery.validate.messages_zh.min.js'></script>
 	<script src='../js/tool.js'></script>
 	<script src='../js/common.js'></script>
-	<script src='../js/setup.js'></script>
+	<script src='../js/config.js'></script>
 </body>
 </html>

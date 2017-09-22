@@ -77,3 +77,63 @@
 			inpCheckboxSelectEvent(_par, allChecked,true);
 		}
 	}
+
+
+
+/* --------------------------  header 用户状态  --------------------------*/ 
+
+$(function(){
+
+	var html = '<img src="../image/common/u1011.png" alt="" class="user-icon">'
+			 +'<span class="user-name">shusen@fiberhome.com</span>'
+			 +'<span class="line"></span>'
+			 +'<div class="news clearfix">'//加 hidden 类 则不显示消息项
+			 	+'<div class="new-prompt">'
+			 		+'<img src="../image/common/u1213.png" alt="">'
+			 		+'<span class="num">3</span>'
+			 	+'</div>'
+			 	+'<div class="news-dropdown">'
+			 		+'<p class="tips">您需设置以下<span>2</span>项，才能进行 全面评估</p>'
+			 		+'<ul class="news-list">'
+			 			+'<li class="news-item active"><img src="../image/common/u1228.png" alt="">FTP未设置</li>'
+			 			+'<li class="news-item"><img src="../image/common/u1228.png" alt="">备件信息未导入</li>'
+			 		+'</ul>'
+			 	+'</div>'
+			 	+'<span class="line"></span>'
+			 +'</div>'
+			 +'<a href="" class="sign-out">退出</a>'
+
+
+
+	$('#header-right').html(html);
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

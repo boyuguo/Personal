@@ -122,6 +122,39 @@
 	width:17%;
 }
 
+.changeUserInfo{
+	padding: 20px;
+}
+
+.newAccountForm{
+	padding: 20px;
+}
+.newAccountForm label{
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+	margin-right: 10px;
+}
+.newAccountForm .form-group:last-child label{
+	float: left;
+}
+
+.newAccountForm input{
+	width: 300px;
+	display: inline-block;
+}
+
+.newAccountForm select{
+	width: 300px;
+}
+
+.newAccountForm textarea{
+	border: 1px solid #ccc;
+	width: 300px;
+	min-height: 100px;
+	padding: 10px;
+}
+
 
 
 

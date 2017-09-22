@@ -18,32 +18,7 @@
 				</div>
 				<h3 class="header_title">PTN评估优化管理系统</h3>
 			</div>
-			<div class="header-right clearfix">
-					<img src="../image/common/u1011.png" alt="" class='user-icon'>
-					<span class="user-name">shusen@fiberhome.com</span>
-					<span class="line"></span>
-					<div class="news clearfix"><!--加 hidden 类 则不显示消息项 -->
-						<div class="new-prompt">
-							<img src="../image/common/u1213.png" alt="">
-							<span class="num">3</span>
-						</div>
-						<div class="news-dropdown">
-							<p class='tips'>您需设置以下<span>2</span>项，才能进行 全面评估</p>
-							<ul class="news-list">
-								<li class="news-item active">
-									<img src="../image/common/u1228.png" alt="">
-									FTP未设置
-								</li>
-								<li class="news-item">
-									<img src="../image/common/u1228.png" alt="">
-									备件信息未导入
-								</li>
-							</ul>
-						</div>
-						<span class="line"></span>
-					</div>
-					<a href="" class="sign-out">退出</a>
-			</div>
+			<div class="header-right clearfix" id="header-right"></div>
 		</div>
 		<!-- common header end -->
 		<!-- common left menu start -->
@@ -134,63 +109,66 @@
 		<!-- common log content start -->
 		<div class="content-box">
 			<div class="config-content">
-				<div class="config-btn-box">
-					<button class="btn btn-blue btn-compile">编辑</button>
-					<button class="btn btn-blue btn-cancel hidden">取消</button>
-					<button class="btn btn-blue btn-conserve hidden">保存</button>
-				</div>
-				<ul class="data-list">
-					<li class="data-list-item data-list-item-one">
-						<div class="search-box">
-							<input type="text" placeholder=" 输入账号、时间、操作信息">
-							<div class="btn search-btn">
-								<img src="../image/management/u3609.png" alt="">
+				<form action="" >
+					<div class="config-btn-box">
+						<span class="btn btn-blue btn-compile">编辑</span>
+						<span class="btn btn-blue btn-cancel hidden">取消</span>
+						<button class="btn btn-blue btn-conserve hidden">保存</button>
+					</div>
+					<ul class="data-list">
+						<li class="data-list-item data-list-item-one">
+							<div class="search-box">
+								<input type="text" placeholder=" 输入账号、时间、操作信息">
+								<div class="btn search-btn">
+									<img src="../image/management/u3609.png" alt="">
+								</div>
 							</div>
-						</div>
-					</li>
-					<li class="data-list-item data-list-item-second">
-						<span class="config-name">名称</span>
-						<span class="config-type">评估类型</span>
-						<span class="config-weight">权重</span>
-						<span class="config-threshold">阈值</span>
-					</li>
-					<li class="data-list-item">
-						<span class="config-name">单段链路CIR带宽利用率</span>
-						<span class="config-type">链路资源评估</span>
-						<span class="config-weight">1%</span>
-						<span class="config-threshold">预警值≥  <input type="text" value="70%" class="inp"/>   告警值≥ <input type="text" value="80%" class="inp"/></span>
-					</li>
-					<li class="data-list-item">
-						<span class="config-name">单段链路CIR带宽利用率</span>
-						<span class="config-type">链路资源评估</span>
-						<span class="config-weight">1%</span>
-						<span class="config-threshold">比值:  <input type="text" value="1" class="inp"/>  <em>（比例值与分数的百分比1）</em></span>
-					</li>
-					<li class="data-list-item">
-						<span class="config-name">单段链路CIR带宽利用率</span>
-						<span class="config-type">链路资源评估</span>
-						<span class="config-weight">1%</span>
-						<span class="config-threshold">GE预警值≥ <input type="text" value="30%" class="inp"/>   非GE预警值≥ <input type="text" value="50%" class="inp"/></span>
-					</li>
-					<li class="data-list-item">
-						<span class="config-name">单段链路CIR带宽利用率</span>
-						<span class="config-type">链路资源评估</span>
-						<span class="config-weight">1%</span>
-						<span class="config-threshold">预警值≥ <input type="text" value="10%" class="inp"/>   告警值≥ <input type="text" value="20%" class="inp"/></span>
-					</li>
-					<li class="data-list-item">
-						<span class="config-name">单段链路CIR带宽利用率</span>
-						<span class="config-type">链路资源评估</span>
-						<span class="config-weight">1%</span>
-						<span class="config-threshold">温度正常范围: <input type="text" value="5°c " class="inp"/>  至 <input type="text" value="50°c " class="inp"/> 电压正常范围: <input type="text" value="-57" class="inp"/> 至 <input type="text" value="-41" class="inp"/></span>
-					</li>
-					<li class="data-list-item data-list-item-last">
-						<p>共 100 项</p>
-					</li>
-					<li class="data-list-item data-list-item-num">
-						翻页
-					</li>
-				</ul>
+						</li>
+						<li class="data-list-item data-list-item-second">
+							<span class="config-name">名称</span>
+							<span class="config-type">评估类型</span>
+							<span class="config-weight">权重</span>
+							<span class="config-threshold">阈值</span>
+						</li>
+						<li class="data-list-item">
+							<span class="config-name">单段链路CIR带宽利用率</span>
+							<span class="config-type">链路资源评估</span>
+							<span class="config-weight">1%</span>
+							<span class="config-threshold">预警值≥  <input type="text" value="70%" disabled="disabled" class="inp"/>   告警值≥ <input type="text" value="80%" disabled="disabled" class="inp"/></span>
+						</li>
+						<li class="data-list-item">
+							<span class="config-name">单段链路CIR带宽利用率</span>
+							<span class="config-type">链路资源评估</span>
+							<span class="config-weight">1%</span>
+							<span class="config-threshold">比值:  <input type="text" value="1" disabled="disabled" class="inp"/>  <em>（比例值与分数的百分比1）</em></span>
+						</li>
+						<li class="data-list-item">
+							<span class="config-name">单段链路CIR带宽利用率</span>
+							<span class="config-type">链路资源评估</span>
+							<span class="config-weight">1%</span>
+							<span class="config-threshold">GE预警值≥ <input type="text" value="30%" disabled="disabled" class="inp"/>   非GE预警值≥ <input type="text" value="50%" disabled="disabled" class="inp"/></span>
+						</li>
+						<li class="data-list-item">
+							<span class="config-name">单段链路CIR带宽利用率</span>
+							<span class="config-type">链路资源评估</span>
+							<span class="config-weight">1%</span>
+							<span class="config-threshold">预警值≥ <input type="text" value="10%" disabled="disabled" class="inp"/>   告警值≥ <input type="text" value="20%" disabled="disabled" class="inp"/></span>
+						</li>
+						<li class="data-list-item">
+							<span class="config-name">单段链路CIR带宽利用率</span>
+							<span class="config-type">链路资源评估</span>
+							<span class="config-weight">1%</span>
+							<span class="config-threshold">温度正常范围: <input type="text" value="5°c " disabled="disabled" class="inp"/>  至 <input type="text" value="50°c " disabled="disabled" class="inp"/> 电压正常范围: <input type="text" value="-57" disabled="disabled" class="inp"/> 至 <input type="text" value="-41" disabled="disabled" class="inp"/></span>
+						</li>
+						<li class="data-list-item data-list-item-last">
+							<p>共 100 项</p>
+						</li>
+						<li class="data-list-item data-list-item-num">
+							翻页
+						</li>
+					</ul>
+				</form>
+				
 					
 			</div>
 		</div>
